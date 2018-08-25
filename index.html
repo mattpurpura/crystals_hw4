@@ -5,18 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
 </head>
 <body>
-    <button class="btn btn-1">Button 1</button>
-    <button class="btn btn-2">Button 2</button>
-    <button class="btn btn-3">Button 3</button>
-    <button class="btn btn-4">Button 4</button>
 
-    <h3>Score: <span id="score"></span></h3>
-    <h3>Wins: <span id="score"></span></h3>
-    <h3>Losses: <span id="score"></span></h3>
+    <div class="row">
+        <header>
+            <button class="btn reset"><img class="i-give-up" src="assets/images/I-give-up.jpg" ></button>
+        </header>
+    </div>
+
+
+    <div class = "container">
+        <div class="row">
+            <div class="col-lg-6 crystals">
+                <div class="row">
+                    <div class="col-md">
+                        <button class="btn btn-1"><img src="assets/images/blue-crystal.png"></button>
+                        <button class="btn btn-2"><img src="assets/images/green-crystal.png"></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md">
+                        <button class="btn btn-3"><img src="assets/images/red crystal.jpg"></button>
+                        <button class="btn btn-4"><img src="assets/images/white-crystal.jpg"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 scoreboard">
+                <h3>Target: <span id="target"></span></h3>
+                <h3>Score: <span id="score"></span></h3>
+                <h3>Wins: <span id="wins"></span></h3>
+                <h3>Losses: <span id="losses"></span></h3>
+            </div>
+        </div>
+    </div>
     
 </body>
 </html>

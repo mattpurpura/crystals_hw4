@@ -10,13 +10,19 @@ var score = 0;
 var wins = 0;
 var losses = 0;
 
+//returns a random number between a given max and min
 function random(max, min){
    return Math.floor(Math.random() * (max - min) + min);
 }
 
 // console.log(crystal4, crystal1);
+
+// console.log(target)
+$("#target").html(target);
+$("#score").html(score);
+$("#wins").html(wins);
+$("#losses").html(losses);
 //game begins on click of any button
-console.log(target)
 $(".btn").on("click", function(){
     
     if ($(this).hasClass("btn-1")){
@@ -39,6 +45,16 @@ $(".btn").on("click", function(){
         console.log(score);
     }
 
+    else if ($(this).hasClass("reset")) {
+        losses++;
+        score = 0;
+        target = random (120, 19);
+        crystal1 = random(12, 1);
+        crystal2 = random(12, 1);
+        crystal3 = random(12, 1);
+        crystal4 = random(12, 1);
+    }
+
     if (score === target){
         wins++;
         score = 0;
@@ -59,7 +75,10 @@ $(".btn").on("click", function(){
         crystal4 = random(12, 1);
     }
 // console.log("wins:", wins, "losses", losses, "score", score);
-
+    $("#target").html(target);
+    $("#score").html(score);
+    $("#wins").html(wins);
+    $("#losses").html(losses);
 });
 
 
