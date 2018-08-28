@@ -12,9 +12,21 @@ var losses = 0;
 
 //returns a random number between a given max and min
 function random(max, min){
-   return Math.floor(Math.random() * (max - min) + min);
+   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
+function resetNumbers(array){
+    array++;
+    score = 0;
+    target = random (120, 19);
+    crystal1 = random(12, 1);
+    crystal2 = random(12, 1);
+    crystal3 = random(12, 1);
+    crystal4 = random(12, 1);
+}
+
+resetNumbers(wins);
+console.log(wins);
 // console.log(crystal4, crystal1);
 
 // console.log(target)
@@ -80,8 +92,6 @@ $(".btn").on("click", function(){
     $("#wins").html(wins);
     $("#losses").html(losses);
 });
-
-
 
 
 });

@@ -14,10 +14,20 @@ body{
     background-size: 15px 30px
     }
 
+.header{
+    margin-top: 25px;
+    background-color: rgb(67, 67, 233);
+}
 
+p{
+    margin-top: 15px;
+    line-height: 2;
+    font-weight: bold;
+}
 
 .reset{
-    margin-left: 100px;
+    margin-top: 65px;
+    margin-left: 50px;
 }
 
 img{
